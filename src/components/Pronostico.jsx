@@ -19,12 +19,12 @@ function Pronostico({ date, temperature, weather, weatherCode }) {
         <div className="forecast-date">{formattedDate}</div>
         <div className="forecast-temperature">
           {temperatureValue} {temperatureUnit}
-          <button onClick={toggleTemperatureUnit}>Toggle Unit</button>
         </div>
         <div className="forecast-weather-icon">
           <img src={weatherIconUrl} alt="Weather Icon" />
         </div>
         <div className="forecast-weather">{weather}</div>
+        <button onClick={toggleTemperatureUnit}>°C a °F </button>
       </div>
     </div>
   );

@@ -48,7 +48,6 @@ function App() {
       )
         .then((response) => response.json())
         .then((data) => {
-          // Filtra los datos para obtener el pronóstico de los próximos 5 días
           const forecast = data.list.filter((item, index) => index % 8 === 0); 
           setForecastData(forecast);
         })

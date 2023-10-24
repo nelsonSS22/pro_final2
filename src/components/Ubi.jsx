@@ -49,6 +49,7 @@ function Ubi(props) {
             humidity={weatherData.main.humidity}
             pressure={weatherData.main.pressure}
             visibility={weatherData.visibility}
+            weatherCode={weatherData.weather[0].icon}
           />
         </div>
       )}

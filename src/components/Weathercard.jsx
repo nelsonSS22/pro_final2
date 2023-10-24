@@ -44,15 +44,14 @@ function Weathercard({
   return (
     <div className="container">
       <div className="card-prin">
+      <button onClick={toggleUnits}>
+           ({isCelsius ? "°C" : "°F"}, {" "}
+          {isMetric ? "m/s" : "mph"})
+        </button>
         <img
           src={weatherIconUrl}
           alt="Weather Icon"
         />
-
-        <button onClick={toggleUnits}>
-          Toggle Units (Temp: {isCelsius ? "°C" : "°F"}, Wind:{" "}
-          {isMetric ? "m/s" : "mph"})
-        </button>
         <p>
         {temperatureValue} {temperatureUnit}
         </p>

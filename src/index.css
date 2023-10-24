@@ -5,17 +5,18 @@ body {
   
 .forecast-cards-container {
     display: flex;
-    flex-wrap: wrap; /* Permite que las cards pasen a la siguiente fila si no caben en el ancho del contenedor */
-    justify-content: flex-start; /* Alinea las cards a la izquierda */
+    flex-wrap: wrap; 
+    justify-content: flex-start; 
     text-align: center;
 }
   
   
   .forecast-card {
-    width: 150px; /* Ancho de la card */
-    height: 200px; /* Altura de la card */
-    margin-right: 10px; /* Margen derecho para separar las cards */
-    margin-bottom: 10px; /* Margen inferior para separar las filas */
+    width: 50%;
+    margin: 10px;
+    height: 200px; 
+    margin-right: 10px;
+    margin-bottom: 10px; 
     padding: 35px;
     border: 1px solid #ccc;
     border-radius: 5px;
@@ -24,27 +25,30 @@ body {
 
 .contProp{
   position: absolute;
-  top: 100px; /* Ajusta la distancia desde la parte superior según sea necesario */
+  top: 100px; 
   right: 100px;
 }
 
 img {
-  width: 150px; /* Establece el ancho deseado, por ejemplo, 200 píxeles */
-  height: 150px; /* Establece la altura deseada, por ejemplo, 150 píxeles */
+  width: 150px; 
+  height: 150px; 
 }
 
-/* Cambiar el tamaño del texto utilizando otras unidades de medida */
 p {
-  font-size: 3rem; /* Ejemplo usando rem */
+  font-size: 3rem;
 }
 
-/* Cambiar el tamaño de la letra de los botones */
 button {
-  font-size: 20px; /* Establece el tamaño de fuente deseado, por ejemplo, 16 píxeles */
+  font-size: 20px; 
 }
 
 input{
-  font-size: 20px; /* Establece el tamaño de fuente deseado, por ejemplo, 16 píxeles */
+  font-size: 20px;
 }
 
+@media screen and (max-width: 768px) {
+  .forecast-card {
+    width: 50%; 
+  }
+}
 
