@@ -54,12 +54,15 @@ function Weathercard({
           {isMetric ? "m/s" : "mph"})
         </button>
         <p>
-          Temperature: {temperatureValue} {temperatureUnit}
+        {temperatureValue} {temperatureUnit}
         </p>
-        <p>Weather: {weather}</p>
+        <p>{weather}</p>
         <h2>{city}</h2>
       </div>
-      <div className="right-corner">
+      
+      <div className="contWather">
+        <div className="right-corner">
+        <h1>Today's Hightlights</h1>
         <div className="card">
           <h3>Wind Status</h3>
           <p>{wind} {weatherUnit}</p>
@@ -72,6 +75,9 @@ function Weathercard({
             </div>
           </div>
         </div>
+      </div>
+      <div className="contWather">
+      <div className="right-corner">
         <div className="card">
           <h3>Pressure</h3>
           <p>{pressure} mb</p>
@@ -80,7 +86,10 @@ function Weathercard({
           <h3>Visibility</h3>
           <p>{visibility} meters</p>
         </div>
+        </div>
+        </div>
       </div>
+      
     </div>
   );
 }

@@ -68,25 +68,15 @@ function App() {
           setSearchMethod("ubi");
         }}
       />
-
+  
       <TemperatureProvider>
         {weatherData && (
           <div>
             <h2>
               Weather in {weatherData.name}, {weatherData.sys.country}
             </h2>
-            <Weathercard
-              temperature={weatherData.main.temp}
-              city={weatherData.name}
-              weather={weatherData.weather[0].description}
-              wind={weatherData.wind.speed}
-              humidity={weatherData.main.humidity}
-              pressure={weatherData.main.pressure}
-              weatherCode={weatherData.weather[0].icon}visibility={weatherData.visibility}
-              
-            />
-            <h3>5-Day Forecast</h3>
-            <div className="forecast-cards">
+            <div className="contProp">
+              <div className="forecast-cards-container">
               {forecastData &&
                 forecastData.map((forecast, index) => (
                   <Pronostico
@@ -94,15 +84,29 @@ function App() {
                     date={forecast.dt_txt}
                     temperature={forecast.main.temp}
                     weather={forecast.weather[0].description}
-                    weatherCode={weatherData.weather[0].icon}visibility={weatherData.visibility}
+                    weatherCode={weatherData.weather[0].icon}
+                    visibility={weatherData.visibility}
                   />
                 ))}
             </div>
+            
+            
+            </div>
+            <Weathercard
+              temperature={weatherData.main.temp}
+              city={weatherData.name}
+              weather={weatherData.weather[0].description}
+              wind={weatherData.wind.speed}
+              humidity={weatherData.main.humidity}
+              pressure={weatherData.main.pressure}
+              visibility={weatherData.visibility}
+              weatherCode={weatherData.weather[0].icon}
+            />
           </div>
         )}
       </TemperatureProvider>
     </div>
-  );
+  );  
 }
 
 export default App;

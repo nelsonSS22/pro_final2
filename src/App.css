@@ -5,6 +5,18 @@
   align-items: flex-start;
 }
 
+.contWather {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  gap: 5px; /* Espacio entre las tarjetas */
+  justify-items: center; /* Centra el contenido horizontalmente */
+  align-items: center; /* Centra el contenido verticalmente */
+  justify-content: flex-start;
+  text-align: center;
+}
+
+
 .card {
   margin: 10px;
   padding: 10px;
