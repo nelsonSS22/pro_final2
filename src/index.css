@@ -1,0 +1,23 @@
+body {
+    color: rgb(231, 231, 235);
+    background-color: rgb(16, 14, 29);
+  }
+  
+
+.forecast-container {
+    position: absolute;
+    top: 10px;  
+    right: 10px;  
+    background-color: #ffffff; 
+    padding: 10px;
+    border: 1px solid #ccc; 
+    border-radius: 5px; 
+  }
+  
+  .forecast-card {
+    margin-bottom: 10px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: rgb(30, 33, 58);
+  }
