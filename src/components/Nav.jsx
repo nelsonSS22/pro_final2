@@ -24,8 +24,11 @@ function Nav(props) {
 
   return (
     <div className="nav">
-      <Ubi onLocationSearch={searchForecast} />
-      <button onClick={toggleInput}>Search for place</button>
+      <div className="barBut">
+        <button onClick={toggleInput}>Search for place</button>
+        <Ubi onLocationSearch={searchForecast} />
+      </div>
+      
       {isInputVisible && (
         <div>
           <input
@@ -34,7 +37,8 @@ function Nav(props) {
             value={city}
             onChange={handleCityChange}
           />
-          <button onClick={searchWeather}>Search</button>
+          <button className="blue-button" onClick={searchWeather}>Search</button>
+          
         </div>
       )}
     </div>

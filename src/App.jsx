@@ -1,9 +1,10 @@
 import React, { useState, useEffect } from "react";
 import Nav from "./components/Nav";
 import Weathercard from "./components/Weathercard";
-import Ubi from "./components/Ubi";
 import Pronostico from "./components/Pronostico";
 import { TemperatureProvider } from "./hooks/TemperatureContext";
+import WeatherDetails from "./components/WhaterDetails";
+
 
 function App() {
   const apiKey = "9cb196b167af58224d44363196cdd805";
@@ -68,13 +69,23 @@ function App() {
         }}
       />
   
-      <TemperatureProvider>
+     <div className="principalContainer">
+     <TemperatureProvider>
         {weatherData && (
           <div>
+              {/* <WeatherDetails
+                weatherCode={weatherData.weather[0].icon}
+                temperature={weatherData.main.temp}
+                weather={weatherData.weather[0].description}
+                city={weatherData.name}
+              /> */}
+            
             <h2>
               Weather in {weatherData.name}, {weatherData.sys.country}
             </h2>
-            <div className="contProp">
+
+          <div className="mid">
+          <div className="contProp">
               <div className="forecast-cards-container">
               {forecastData &&
                 forecastData.map((forecast, index) => (
@@ -89,7 +100,6 @@ function App() {
                 ))}
             </div>
             
-            
             </div>
             <Weathercard
               temperature={weatherData.main.temp}
@@ -102,9 +112,11 @@ function App() {
               weatherCode={weatherData.weather[0].icon}
             />
           </div>
+          </div>
         )}
       </TemperatureProvider>
     </div>
+     </div>
   );  
 }
 

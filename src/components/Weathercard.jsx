@@ -56,7 +56,9 @@ function Weathercard({
         {temperatureValue} {temperatureUnit}
         </p>
         <p>{weather}</p>
-        <h2>{city}</h2>
+        <h2><span class="material-symbols-outlined">
+location_on
+</span>{city}</h2>
       </div>
       
       <div className="contWather">
@@ -67,28 +69,28 @@ function Weathercard({
           <p>{wind} {weatherUnit}</p>
         </div>
         <div className="card">
-          <h3>Humidity</h3>
-          <div className="humidity-bar">
-            <div className="humidity-progress" style={{ width: `${humidity}%` }}>
-              {humidity}%
-            </div>
-          </div>
-        </div>
-      </div>
-      <div className="contWather">
-      <div className="right-corner">
-        <div className="card">
-          <h3>Pressure</h3>
-          <p>{pressure} mb</p>
-        </div>
-        <div className="card">
           <h3>Visibility</h3>
           <p>{visibility} meters</p>
         </div>
+
+      </div>
+  
+      <div className="right-corner">
+
+        <div className="card">
+          <h3>Humidity</h3>
+          <p>{humidity}%</p>
+          <div className="humidity-bar">          
+          <div className="humidity-progress" style={{ width: `${humidity}%` }}></div>
+          </div>        
         </div>
+        <div className="card">
+          <h3>Air Pressure</h3>
+          <p>{pressure} mb</p>
+        </div>
+       
         </div>
       </div>
-      
     </div>
   );
 }
